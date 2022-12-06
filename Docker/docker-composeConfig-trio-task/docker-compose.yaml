@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   flask-app:
-    build: ./flask-app
+    build: ./trio-task/flask-app
     ports:
     - target: 5000
       published: 5000
@@ -17,5 +17,5 @@ services:
       source: ./trio-task/nginx/nginx.conf
       target: /etc/nginx/nginx.conf
   db:
-    build: ./db
+    build: ./trio-task/db
     image: mysql:5.7
