@@ -18,4 +18,6 @@ services:
       target: /etc/nginx/nginx.conf
   mysql:
     build: ./trio-task/db
-    image: mysql:5.7
+    target: 3306
+    published: 3306
+    protocol: tcp
