@@ -3,6 +3,7 @@ FROM python:3.6
 # Copy contents into image
 WORKDIR /app
 COPY app.py requirements.txt ./
+COPY templates /app/templates
 # install pip dependencies from requirements file
 RUN pip3 install -r requirements.txt
 # Expose correct port
