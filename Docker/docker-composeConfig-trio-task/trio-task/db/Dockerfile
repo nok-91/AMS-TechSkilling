@@ -3,7 +3,7 @@
 FROM mysql:5.7
 # Add a database and root password
 ENV MYSQL_DATABASE=flask-db
-ENV MYSQL_ROOT_PASSWORD=password123
+ENV MYSQL_ROOT_PASSWORD="password123"
 # For hints on how to do this, consult the mysql 5.7 image documentation
 
 # Add the content of the .sql file to your image
