@@ -14,5 +14,5 @@ services:
       protocol: tcp
     volumes:
     - type: bind
-      source: ./nginx/nginx.conf
-      target: /etc/nginx/nginx.conf
+      source: ./duo-task/nginx/nginx.conf
+      target: /etc/duo-task/nginx/nginx.conf
