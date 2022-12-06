@@ -14,7 +14,7 @@ services:
       protocol: tcp
     volumes:
     - type: bind
-      source: ./duo-task/nginx/nginx.conf
-      target: /etc/duo-task/nginx/nginx.conf
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf
     depends_on:
       - "flask-app"
