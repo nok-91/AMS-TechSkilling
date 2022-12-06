@@ -18,4 +18,5 @@ services:
       target: /etc/nginx/nginx.conf
   db:
     build: ./trio-task/db
+    image: mysql:5.7
     protocol: tcp
