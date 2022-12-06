@@ -16,6 +16,6 @@ services:
     - type: bind
       source: ./trio-task/nginx/nginx.conf
       target: /etc/nginx/nginx.conf
-  db:
+  mysql:
     build: ./trio-task/db
     image: mysql:5.7
