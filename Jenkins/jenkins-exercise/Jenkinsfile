@@ -6,6 +6,7 @@ pipeline{
         stages{
             stage('Clone Repo'){
                 steps{
+                    sh "cd jenkins-exercise"
                     sh "git clone https://gitlab.com/qacdevops/chaperootodo_client.git"
                 }
             }
