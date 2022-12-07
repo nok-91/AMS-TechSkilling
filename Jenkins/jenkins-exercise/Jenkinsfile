@@ -4,6 +4,11 @@ pipeline{
                 DB_PASSWORD = "password123"
             }
         stages{
+            stage('Make Directory'){
+                steps{
+                    sh "mkdir ~/jenkins-exercise"
+                }
+            }
             stage('Clone Repo'){
                 steps{
                     sh "git clone https://gitlab.com/qacdevops/chaperootodo_client.git"
