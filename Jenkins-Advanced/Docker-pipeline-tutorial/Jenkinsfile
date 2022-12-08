@@ -2,18 +2,20 @@ pipeline{
         agent any
         environment {
             app_version = 'v1'
-            rollback = 'false'
+            rollback = 'true'
         }
         stages{
             stage('Build Image'){
                 steps{
+                    dir('Jenkins-Advanced/Docker-pipeline-tutorial'){
                     script{
                         if (env.rollback == 'false'){
-                            image = docker.build("NokDev/chaperoo-frontend")
+                            image = docker.build("nokdev/chaperoo-frontend")
                         }
                     }
                 }
             }
+        }
             stage('Tag & Push Image'){
                 steps{
                     script{
@@ -27,7 +29,9 @@ pipeline{
             }
             stage('Deploy App'){
                 steps{
+                    dir('Jenkins-Advanced/Docker-pipeline-tutorial'){
                     sh "docker-compose pull && docker-compose up -d"
+                    }
                 }
             }
         }
