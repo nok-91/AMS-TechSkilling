@@ -27,6 +27,7 @@ pipeline{
                 steps{
                     withCredentials([string(credentialsId: 'DATABASE_PASSWORD', variable: 'DB_PASSWORD')]){
                         sh 'sudo docker-compose -f docker-compose.yaml pull  && sudo docker-compose -f docker-compose.yaml up -d'
+                    }
                 }
             }
         }
