@@ -29,7 +29,9 @@ pipeline{
             }
             stage('Deploy App'){
                 steps{
+                    dir('Jenkins-Advanced/Docker-pipeline-tutorial'){
                     sh "docker-compose pull && docker-compose up -d"
+                    }
                 }
             }
         }
