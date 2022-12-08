@@ -7,6 +7,7 @@ pipeline{
         stages{
             stage('Build Image'){
                 steps{
+                    dir('Jenkins-Advanced/Docker-pipeline-tutorial'){
                     script{
                         if (env.rollback == 'false'){
                             image = docker.build("nokdev/chaperoo-frontend")
@@ -14,6 +15,7 @@ pipeline{
                     }
                 }
             }
+        }
             stage('Tag & Push Image'){
                 steps{
                     script{
