@@ -9,6 +9,7 @@
       update_cache: true
     register: nginxcachetime
     failed when: "nginxcachetime.cache_update_time > 1"
+  
   - name: nginx cache debug
     debug:
       var: nginxcachetime
