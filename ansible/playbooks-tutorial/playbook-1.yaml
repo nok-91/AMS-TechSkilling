@@ -20,7 +20,6 @@
       dest: /etc/nginx/nginx.conf
     register: nginx_config
 
-
   - name: Copy nginx file info
     debug:
       msg: "{{ nginx_config }}"
@@ -32,11 +31,8 @@
       state: restarted
     when: nginx_config.changed == true
 
-
   - name: Uninstall nginx
     apt:
       name: nginx
       state: absent
       autoremove: yes
-
-  
