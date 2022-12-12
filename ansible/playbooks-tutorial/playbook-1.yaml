@@ -8,8 +8,7 @@
       state: present
       update_cache: true
     register: nginxcachetime
-    failed when: "nginxcachetime.cache_update_time > 1"
-  
+    #failed when: "nginxcachetime.cache_update_time > 1"
   - name: nginx cache debug
     debug:
       var: nginxcachetime
@@ -25,7 +24,6 @@
     debug:
       msg: "{{ nginx_config }}"
     
-  
   - name: Restart nginx if needed
     service:
       name: nginx
