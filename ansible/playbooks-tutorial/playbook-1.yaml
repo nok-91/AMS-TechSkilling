@@ -27,7 +27,6 @@
       msg: "{{ nginx_config }}"
     
   
-
   - name: Restart nginx if needed
     service:
       name: nginx
