@@ -1,8 +1,0 @@
-- hosts: all
-    tasks:
-      - name: Get IP
-          debug: var=hostvars[inventory_hostname]['ansible_default_ipv4']['address']
-          register: host_ip
-          msg: host_ip
-
-      
