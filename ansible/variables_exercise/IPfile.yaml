@@ -1,0 +1,10 @@
+- hosts: localhost
+  vars:
+    host_ip: "{{ ansible_default_ipv4.address }}"
+  tasks:
+    - name: Get IP
+      copy:
+        dest: /tmp/newfile.txt
+        content: "{{ host_ip }}"
+
+      
