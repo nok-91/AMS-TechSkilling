@@ -1,0 +1,10 @@
+- name: Init a new swarm with default parameters
+  community.docker.docker_swarm:
+    state: present
+
+# - name: Add nodes
+#   community.docker.docker_swarm:
+#     state: join
+#     advertise_addr: 35.179.88.41
+#     join_token: SWMTKN-1--xxxxx
+#     remote_addrs: [ '172.31.32.254' ]
