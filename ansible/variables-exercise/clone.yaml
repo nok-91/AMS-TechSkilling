@@ -1,10 +1,9 @@
-- hosts: localhost
-  connection: local
+- hosts: all
   become: true
   tasks:
   - name: Clone a github repository
     git:
       repo: https://github.com/sqlite/sqlite.git
-      dest: /home/repos/
+      dest: /home/ubuntu/repos/
       clone: yes
       update: yes
