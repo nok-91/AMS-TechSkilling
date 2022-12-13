@@ -3,5 +3,5 @@
     host_os: "{{ ansible_distribution }}"
   tasks:
   - name: "Get os using when"
-    debug: msg="{{ host_os }}"
+    debug: os="{{ host_os }}"
     when: "host_os == 'ubuntu'"
